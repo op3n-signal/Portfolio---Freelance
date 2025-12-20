@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: unset !important;
+}
+
+.about-content {
+    padding: 80px;
+}
+
+.icon {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+
+    font-weight: lighter;
+}
+
+
+
+
+.profile-image {
+    border: solid 1.5px rgb(31, 30, 30);
+    border-radius: 50%;
+}
+
+
+h6 {
+    font-size: 6px;
+    font-weight: lighter;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.headline-name {
+    color: rgb(63, 115, 255);
+}
+
+@media (max-width: 767px) {
+    .profile-image-container {
+        display: flex;
+        justify-content: center;
+    }
+}
