@@ -5,6 +5,7 @@
 }
 
 .portfolio-card {
+    max-width: 600px;
     padding: 20px 25px;
 }
 .portfolio-card:hover {
