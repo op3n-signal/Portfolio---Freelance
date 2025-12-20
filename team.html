@@ -10,49 +10,42 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="header py-3 d-flex justify-content-between">
-                <div class="icon"><a href="index.html">Handy Websites</a></div>
-                <div class="nav pt-1">
-                    <nav>
-                        <ul class="d-flex">
-                            <!--<li><a class="mx-3" href="">About</a></li>-->
-                            <!--<li><a class="mx-3" href="">Portfolio</a></li>-->
-                            <li><a class="mx-3" href="./team.html" style="white-space: nowrap;">Meet the Team</a></li>
-                        </ul>
-                    </nav>                    
-                </div>
-
-                <!-- Burger Menu todo--> 
-            </div>
-        </header>
+        <div id="header"></div>
         <main>
             <div class="row">
-                <h1 class="headline-name mt-4">Meet Our Team</h1>
-                <p>Meet the small team of problem-solvers!</p>
-                <div class="team-container mt-4">
-                    <div class="card team-card">
-                        <img class="img" src="./assets/antonio.jpg" alt="team photo of the ceo">           
-                        <div class="team-title">CEO</div>
-                        <div>Antonio Martinez</div>
-                    </div>       
-                    <div class="card team-card">
-                        <img class="img" src="./assets/cannon.jpg" alt="team photo of customer support">
-                        <div class="team-title">Customer Support</div>
-                        <p>Cannon Martinez</p>
-                    </div>                 
+                <div class="col-lg">
+                    <div class="about-content">
+                        <h1 class="headline-name">Meet Our Team</h1>
+                        <p>Meet the small team of problem-solvers!</p>
+                        <div class="team-container mt-4">
+                            <div class="card team-card">
+                                <img class="img" src="./assets/antonio.jpg" alt="team photo of the ceo">           
+                                <div class="team-title">CEO</div>
+                                <div>Antonio Martinez</div>
+                            </div>       
+                            <div class="card team-card">
+                                <img class="img" src="./assets/cannon.jpg" alt="team photo of customer support">
+                                <div class="team-title">Customer Support</div>
+                                <p>Cannon Martinez</p>
+                            </div>                 
+                        </div>                    
+                    </div>                    
                 </div>
+
+
             </div>
         </main>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="footer mt-5">
-                        Copyright @ 2025
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
+
+<script>
+    fetch("./views/header.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("./views/footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>

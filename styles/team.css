@@ -21,22 +21,8 @@
     border: solid 1.5px rgb(31, 30, 30);
 }
 
-@media (max-width: 403px) {
+@media (max-width: 443px) {
     .team-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .team-card {
-        max-width: 70vw;
-        min-width: 200px;
-        margin: auto;
-    }
-}
-
-@media (max-width: 403px) {
-    .img {
-        width: 80%;
-        margin: auto;
+        justify-content: center;
     }
 }
