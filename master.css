@@ -58,3 +58,10 @@ h6 {
         justify-content: center;
     }
 }
+
+@media (max-width: 514px) {
+    .about-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
