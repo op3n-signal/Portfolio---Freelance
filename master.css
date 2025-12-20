@@ -22,11 +22,11 @@ a {
 }
 
 .icon {
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-
-    font-weight: lighter;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(154, 165, 193);
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
 
 
@@ -55,6 +55,10 @@ h6 {
 .footer {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
+}
+
+main {
+    min-height: 80vh;
 }
 
 @media (max-width: 767px) {
