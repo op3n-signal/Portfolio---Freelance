@@ -16,7 +16,7 @@
 }
 
 .img {
-    min-height: 75%;
+    min-height: 80%;
     border-radius: 50%;
     border: solid 1.5px rgb(31, 30, 30);
 }
@@ -30,6 +30,13 @@
     .team-card {
         max-width: 70vw;
         min-width: 200px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 403px) {
+    .img {
+        width: 80%;
         margin: auto;
     }
 }
