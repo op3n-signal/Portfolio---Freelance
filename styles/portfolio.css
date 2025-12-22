@@ -32,9 +32,21 @@
 }
 .project-img-1 {
     background: url('../assets/birds-unfiltered-thumbnail.png') top / cover no-repeat;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 .project-img-2 {
-    background: url('../assets/product-pricing-page.png') top / cover no-repeat;
+    background: url('../assets/product-pricing-page.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .project-details {
