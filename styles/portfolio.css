@@ -24,12 +24,17 @@
     flex: 1;
 }
 .project-img {
-    background: top / cover no-repeat url('../assets/birds-unfiltered-thumbnail.png');
     height: 65%;
     max-width: 95%;
     min-width: 70%;
     border: solid 2px rgb(215, 214, 214);
     border-radius: 4px;
+}
+.project-img-1 {
+    background: top / cover no-repeat url('../assets/birds-unfiltered-thumbnail.png');
+}
+.project-img-2 {
+    background: top / cover no-repeat url('../assets/product-pricing-page.png');
 }
 
 .project-details {
