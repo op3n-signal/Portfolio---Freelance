@@ -1,6 +1,6 @@
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
     column-gap: 10px;
 }
 
@@ -17,33 +17,30 @@
 .portfolio-content {
     display: flex;
     column-gap: 20px;
-    min-height: 120px;
+    min-height: 100px;
+    height: 15vh;
 }
 
 .project-img-container {
     flex: 1;
+    height: 65%;
 }
 .project-img {
-    height: 65%;
     max-width: 95%;
     min-width: 70%;
+    height: 100%;
     border: solid 2px rgb(215, 214, 214);
     border-radius: 4px;
 }
 .project-img-1 {
-    background: url('../assets/birds-unfiltered-thumbnail.png') top / cover no-repeat;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
+    height: 100%;
 }
 .project-img-2 {
-    background: url('../assets/product-pricing-page.png');
+    background: url('https://www.getbws.com/assets/product-pricing-page.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    background-attachment: fixed;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -77,4 +74,12 @@
     border-radius: 5px;
     color: rgb(65, 255, 185);
     font-size: 10px;
+}
+
+@media (max-width: 425px) {
+    .portfolio-card:hover {
+        background: unset;
+        border-radius: unset;
+        box-shadow: unset;
+    }
 }
