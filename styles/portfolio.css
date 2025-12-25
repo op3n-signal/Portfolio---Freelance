@@ -5,6 +5,7 @@
 }
 
 .portfolio-card {
+    width: 100%;
     max-width: 600px;
     padding: 20px 25px;
 }
@@ -15,6 +16,7 @@
 }
 
 .portfolio-content {
+    position: relative;
     display: flex;
     column-gap: 20px;
     min-height: 100px;
@@ -77,9 +79,22 @@
 }
 
 @media (max-width: 425px) {
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio-content {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
     .portfolio-card:hover {
         background: unset;
         border-radius: unset;
         box-shadow: unset;
+    }
+
+    .project-details {
+        padding-top: 4px;
     }
 }
