@@ -14,33 +14,42 @@
     <script type="importmap"></script>
     <title>Better Web Solutions</title>
     <link href="./master.css" rel="stylesheet">
+    <link href="./styles/shared.css" rel="stylesheet">
+    <link href="./styles/home.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <div id="header"></div>
+        <div id="header" style="margin-top: 100px;"></div>
         <main>
             <div class="row">
-                    <div class="col-lg">
-                        <div class="about-content">
-                            <h6>Hello, my name is</h6>
-                            <p class="headline"><span class="headline-name">Antonio Martinez.</span><br />
-                            I build things for the web.</p>
-                            <!--<p>You can think of me as a your local contractor.</p>
-                            <p>anytime something breaks or something needs to be done on the web</p>                            -->
-                            <p>I’ve built complete websites from start to finish and created scalable back-end architecture to support business tasks.</p>
-                            <p>Feel free to reach out and I'd be happy to let you know how I can help!</p>
-                            <!--<button class="px-1">Learn More</button>-->
-                            <button class="px-1"><a href="mailto:amartinez@getbws.com">Contact</a></button>
-                        </div>
+                <div class="col-lg d-flex justify-content-center">
+                    <div class="about-content">
+                        <span id="hello-prompt">Hello, my name is</span>
+                        <p class="headline"><span id="show-name-prompt" class="headline-name">Antonio Martinez.</span><br />
+                        <span id="about-me-prompt">I build things for the web.</span></p>                           
                     </div>
-                    <div class="col-lg">
-                        <div class="pt-5 profile-image-container">
-                            <img class="profile-image" src="./assets/antonio.jpg" width="300px" alt="Antonio Martinez profile image">                            
-                        </div>
+                </div>
+                <div class="col-lg">
+                    <div class="pt-5 profile-image-container">
+                        <img class="profile-image" src="./assets/antonio.jpg" width="400px" alt="Antonio Martinez profile image">                            
                     </div>
-                
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="col-lg">
+                    <div class="secondary-content w-75">
+                        <p><q>I’ve built complete websites and software from start to finish and created scalable back-end architecture to support business tasks.</q></p>
+                    </div>
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col-lg">
+                    <div id="project-section" class="project-content">
+                        <h2 class="mb-3 fw-bold animated-element">Recent work</h2>
+                    </div>
+                </div>
             </div>
         </main>
         <div id="footer"></div>
@@ -49,7 +58,7 @@
 </body>
 </html>
 
-<script>
+<script type="module">
     fetch("./views/header.html")
     .then(response => response.text())
     .then(data => document.getElementById("header").innerHTML = data)
