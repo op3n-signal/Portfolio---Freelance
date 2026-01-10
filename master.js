@@ -16,7 +16,7 @@ function toggleNav(event) {
         title: "Birds Unfiltered",
         description: "A Philadelphia Eagles sports blog with a legacy design.",
         image: "./assets/birds-unfiltered-thumbnail.png",
-        url: "https://birds-unfiltered.com"
+        url: "https://birdsunfiltered.com"
     },
     {
         title: "Product Pricing Page",
