@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: sans-serif; 
 }
 
 li {
@@ -18,7 +18,29 @@ a {
 }
 
 .about-content {
-    padding: 80px;
+    padding: 0 80px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative;
+}
+
+.secondary-content,
+.project-content {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-content {
+    margin: 120px 0;
+}
+
+.secondary-content {
+    margin: 160px 0 80px;
+    font-size: 20px;
 }
 
 .icon {
@@ -29,9 +51,22 @@ a {
     font-weight: bold;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 1px rgba(232, 232, 232, 0.576);
+    z-index: 1;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
+    width: 85%;
+    height: 60px;
+    margin: auto;
 }
 .nav-items {
     display: flex;
@@ -52,11 +87,62 @@ a {
     left: 2px;
 }
 
-.profile-image {
-    border: solid 1.5px rgb(31, 30, 30);
-    border-radius: 50%;
+/* Card */
+.card-button {
+    padding: 1px 3px;
+}
+.card-button:hover {
+    transform: scale(1.1);
+    background: #ededed;
 }
 
+.profile-image {
+    border-radius: 50%;
+ 
+
+}
+
+@keyframes slide-in {
+    0% { transform: translateX(50vw);}
+    70% { transform: translateX(50vw);}
+    100% { transform: unset;}
+}
+
+/* Load prompts */
+
+#hello-prompt {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 6s;
+}
+
+#show-name-prompt {
+    animation: appear 2.5s;
+}
+
+#about-me-prompt {
+    animation: appear 3.5s;
+}
+
+@keyframes typing {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes typing-2 {
+  0% { width: 0%; }
+  18% { width: 0%;}
+  100% { width: 100%; }
+}
+
+@keyframes appear {
+
+    0% { visibility: hidden; }
+    90% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
+/* Load prompts end */
 
 h6 {
     font-size: 6px;
@@ -65,10 +151,11 @@ h6 {
 
 .headline {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 .headline-name {
+    font-size: 56px;
     color: rgb(63, 115, 255);
 }
 
@@ -81,13 +168,6 @@ main {
     min-height: 80vh;
 }
 
-@media (max-width: 767px) {
-    .profile-image-container {
-        display: flex;
-        justify-content: center;
-    }
-}
-
 @media (max-width: 991px) {
     .about-content {
         padding-left: 20px;
@@ -95,7 +175,7 @@ main {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .custom-nav {
         display: none;
     }
@@ -148,4 +228,27 @@ main {
     .nav-items li {
         text-align: center;
     }
+}
+
+.animated-element {
+  /* Initial state can be set implicitly or explicitly */
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition if JS fallback is needed */
+
+  /* Scroll-driven animation properties */
+  animation: scaleIn 0.5s ease-out forwards; /* Apply the keyframes */
+  animation-timeline: view(); /* Drive the animation by the element's view progress */
+  animation-range: entry 0% cover 50%; /* Adjust range as needed */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8); /* Starts at half size */
+    opacity: 0;
+  }
+  to {
+    transform: scale(1); /* Ends at full size */
+    opacity: 1;
+  }
 }

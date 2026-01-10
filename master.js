@@ -10,3 +10,53 @@ function toggleNav(event) {
     burgerLine2.classList.toggle('active-line-2');
     burgerLine3.classList.toggle('active-line-3');
 }
+
+    const projects = [
+    {
+        title: "Birds Unfiltered",
+        description: "A Philadelphia Eagles sports blog with a legacy design.",
+        image: "./assets/birds-unfiltered-thumbnail.png",
+        url: "https://birds-unfiltered.com"
+    },
+    {
+        title: "Product Pricing Page",
+        description: "A design I created to display pricing packages.",
+        image: "./assets/product-pricing-page.png",
+        url: "https://op3n-signal.github.io/table/"
+    }
+    ];
+
+    async function createProjectCard(title, description, image, onClick) {
+        const res = await fetch("/views/project-card.html");
+        const html = await res.text();
+
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = html;
+        const card = wrapper.firstElementChild;
+
+        wrapper.querySelector(".card-title").textContent = title;
+        wrapper.querySelector(".card-description").textContent = description;
+        const img = card.querySelector(".card-image");
+        img.src = image;
+        img.alt = "project";
+
+        const button = card.querySelector(".card-button");
+        button.addEventListener("click", onClick);
+
+        return wrapper.firstElementChild;
+    }
+    async function init() {
+        const container = document.querySelector("#project-section");
+        for (const project of projects) {
+            const card = await createProjectCard(
+                project.title,
+                project.description,
+                project.image,
+                () => window.open(project.url, "_blank")
+            );
+
+            container.appendChild(card);
+        }
+    }
+
+    init();

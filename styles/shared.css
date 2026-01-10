@@ -1,0 +1,40 @@
+
+
+.lg-project-preview {
+    display: flex;
+    box-shadow: 1px 1px 5px 1px rgb(193, 193, 193);
+    border-radius: 25px;
+    background: linear-gradient(135deg,
+  #2563EB 0%,
+  #93C5FD 100%);
+  color: white;
+}
+
+.project-image-container {
+    padding: 25px;
+    border-radius: 25px;
+    flex: 1;
+    position: relative;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.project-detail {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .profile-image-container {
+        display: flex;
+        justify-content: center;
+    }
+}
