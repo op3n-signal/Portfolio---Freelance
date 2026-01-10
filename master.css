@@ -18,7 +18,7 @@ a {
 }
 
 .about-content {
-    padding: 0 80px;
+    padding: 0 0 80px 0;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -95,10 +95,14 @@ header {
     transform: scale(1.1);
     background: #ededed;
 }
-
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+}
 .profile-image {
     border-radius: 50%;
- 
+    width: 80%;
+    max-width: 450px;
 
 }
 
@@ -172,12 +176,14 @@ main {
     .about-content {
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 40px;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 630px) {
     .custom-nav {
         display: none;
+        font-size: 20px;
     }
     .custom-nav.open {
         display: flex;
@@ -206,7 +212,7 @@ main {
 
     .custom-nav {
         flex-direction: column;
-        background: rgba(26, 26, 26, 0.954);
+        background: rgb(63, 115, 255);
         position: fixed;
         top: 0;
         right: 0;
@@ -223,6 +229,7 @@ main {
         align-content: center;
         justify-content: center;
         justify-items: center;
+        line-height: 35px;
     }
 
     .nav-items li {

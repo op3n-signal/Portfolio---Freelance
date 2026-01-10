@@ -32,9 +32,34 @@
     align-items: center;
 }
 
+@media (max-width: 1200px) {
+   
+
+    .lg-project-preview {
+        flex-direction: column;
+    }
+    .project-detail {
+        padding: 20px 0;
+        flex: 1;
+    }
+}
+
 @media (max-width: 767px) {
     .profile-image-container {
         display: flex;
         justify-content: center;
+    }
+
+     .project-content {
+        padding: 0 0px;
+    }
+}
+
+@media (max-width: 388px) {
+    .card-description {
+        display: none;
+    }
+    .card-title {
+        padding: 0 10px 20px;
     }
 }
