@@ -20,17 +20,6 @@
         </main>
         <div id="footer"></div>
     </div>
-    <script src="./master.js"></script>
+    <script type="module" src="./master.js"></script>
 </body>
 </html>
-
-<script>
-    fetch("./views/header.html")
-    .then(response => response.text())
-    .then(data => document.getElementById("header").innerHTML = data)
-    .then(() => document.getElementById('burger').addEventListener('click', toggleNav));
-
-  fetch("./views/footer.html")
-    .then(response => response.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>

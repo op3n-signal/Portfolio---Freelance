@@ -1,3 +1,13 @@
+import ObjectScaler from './module.js';
+
+fetch("./views/header.html")
+.then(response => response.text())
+.then(data => document.getElementById("header").innerHTML = data)
+.then(() => document.getElementById('burger').addEventListener('click', toggleNav));
+
+fetch("./views/footer.html")
+.then(response => response.text())
+.then(data => document.getElementById("footer").innerHTML = data);
 
 function toggleNav(event) {
     const customNav = document.querySelector('.custom-nav');
@@ -26,13 +36,14 @@ function toggleNav(event) {
     }
     ];
 
-    async function createProjectCard(title, description, image, onClick) {
+    async function createProjectCard(title, description, image, onClick, count) {
         const res = await fetch("/views/project-card.html");
         const html = await res.text();
 
         const wrapper = document.createElement("div");
         wrapper.innerHTML = html;
         const card = wrapper.firstElementChild;
+        card.classList.add(`animated-element-${count}`);
 
         wrapper.querySelector(".card-title").textContent = title;
         wrapper.querySelector(".card-description").textContent = description;
@@ -47,16 +58,27 @@ function toggleNav(event) {
     }
     async function init() {
         const container = document.querySelector("#project-section");
+        let i = 1;
+        let classNames = [];
+
         for (const project of projects) {
             const card = await createProjectCard(
                 project.title,
                 project.description,
                 project.image,
-                () => window.open(project.url, "_blank")
+                () => window.open(project.url, "_blank"),
+                i
             );
 
             container.appendChild(card);
+
+            classNames.push(`animated-element-${i}`);
+
+            i++;
         }
+
+        const animator = new ObjectScaler(classNames);
+        animator.run();
     }
 
     init();

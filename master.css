@@ -26,18 +26,6 @@ a {
     position: relative;
 }
 
-.secondary-content,
-.project-content {
-    padding: 0 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.project-content {
-    margin: 120px 0;
-}
-
 .secondary-content {
     margin: 160px 0 80px;
     font-size: 20px;
@@ -237,40 +225,15 @@ main {
     }
 }
 
-.animated-element-old {
-  /* Initial state can be set implicitly or explicitly */
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition if JS fallback is needed */
 
-  /* Scroll-driven animation properties */
-  animation: 0.5s ease-out forwards scaleIn; /* Apply the keyframes */
-  animation-timeline: view(); /* Drive the animation by the element's view progress */
-  animation-range: entry 0% cover 50%; /* Adjust range as needed */
+.secondary-content,
+.project-content {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-@keyframes scaleInOld {
-  from {
-    opacity: 0;
-    transform: scale(0.8); /* Starts at half size */
-  }
-  to {
-    opacity: 1;
-    transform: scale(1); /* Ends at full size */
-  }
-}
-
-.animated-element {
-  transform: translate3d(0px, 0px, 0px) scale3d(0.85, 0.85, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  will-change: transform;
-  transform-style: preserve-3d;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: translate3d(0px, 0px, 0px) scale3d(0.85, 0.85, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  }
-  to {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  }
+.project-content {
+    margin: 120px 0;
 }
